@@ -12,6 +12,7 @@
 		57910EA61EA8175500A34FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57910EA51EA8175500A34FC7 /* Assets.xcassets */; };
 		57910EA91EA8175500A34FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57910EA71EA8175500A34FC7 /* LaunchScreen.storyboard */; };
 		57910EB11EA8182200A34FC7 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57910EB01EA8182200A34FC7 /* CheckListViewController.swift */; };
+		57910EB51EA84C3800A34FC7 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57910EB41EA84C3800A34FC7 /* CheckListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		57910EA81EA8175500A34FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57910EAA1EA8175500A34FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57910EB01EA8182200A34FC7 /* CheckListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckListViewController.swift; path = ../CheckListViewController.swift; sourceTree = "<group>"; };
+		57910EB41EA84C3800A34FC7 /* CheckListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				57910E9E1EA8175500A34FC7 /* AppDelegate.swift */,
 				57910EB01EA8182200A34FC7 /* CheckListViewController.swift */,
+				57910EB41EA84C3800A34FC7 /* CheckListItem.swift */,
 				57910EA21EA8175500A34FC7 /* Main.storyboard */,
 				57910EA51EA8175500A34FC7 /* Assets.xcassets */,
 				57910EA71EA8175500A34FC7 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57910EB51EA84C3800A34FC7 /* CheckListItem.swift in Sources */,
 				57910E9F1EA8175500A34FC7 /* AppDelegate.swift in Sources */,
 				57910EB11EA8182200A34FC7 /* CheckListViewController.swift in Sources */,
 			);
