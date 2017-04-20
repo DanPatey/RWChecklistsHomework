@@ -13,6 +13,6 @@ class CheckListItem {
     var checked = false
     
     func toggleChecker() {
-        checked != checked
+        checked = !checked
     }
 }
