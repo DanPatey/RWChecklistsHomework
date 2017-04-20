@@ -78,6 +78,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Dgs-bn-wfU" id="Mos-Hh-jrc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -96,12 +99,16 @@
                                 <action selector="cancel:" destination="Dgs-bn-wfU" id="F1W-2Q-EsN"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5T5-Hj-Pgu">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="5T5-Hj-Pgu">
                             <connections>
                                 <action selector="done:" destination="Dgs-bn-wfU" id="lWf-lx-v3E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="5T5-Hj-Pgu" id="De9-6m-B2z"/>
+                        <outlet property="textField" destination="hnM-wn-6VO" id="nbH-Tv-AMT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uca-gl-oI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
