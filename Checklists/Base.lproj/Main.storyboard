@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,29 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="yVq-yJ-TAb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="yVq-yJ-TAb">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVq-yJ-TAb" id="KQZ-yh-wJx">
-                                    <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✔️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-1E-31a">
-                                            <rect key="frame" x="8" y="12" width="23" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-1E-31a">
+                                            <rect key="frame" x="-12" y="16" width="23" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ol8-ZR-2g1">
-                                            <rect key="frame" x="39" y="-1" width="279" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ol8-ZR-2g1">
+                                            <rect key="frame" x="19" y="0.0" width="279" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="279" id="w5W-U2-Z1I"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ol8-ZR-2g1" firstAttribute="leading" secondItem="i0V-1E-31a" secondAttribute="trailing" constant="8" symbolic="YES" id="FvZ-Dg-1nA"/>
+                                        <constraint firstItem="i0V-1E-31a" firstAttribute="top" secondItem="KQZ-yh-wJx" secondAttribute="topMargin" constant="8" id="S09-ui-k0Y"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ol8-ZR-2g1" secondAttribute="trailing" constant="2" id="UC5-PZ-SEO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="i0V-1E-31a" secondAttribute="bottom" constant="1.5" id="c8E-JR-IA7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ol8-ZR-2g1" secondAttribute="bottom" constant="-0.5" id="sA4-5A-GlB"/>
+                                        <constraint firstItem="ol8-ZR-2g1" firstAttribute="top" secondItem="KQZ-yh-wJx" secondAttribute="top" id="zqD-Gi-WbS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pLX-7p-jZ0" kind="presentation" identifier="EditItem" id="1KV-yt-sCg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,7 +65,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="USh-N1-saj">
                             <connections>
                                 <action selector="AddItem:" destination="X3Z-x9-bgC" id="FcL-03-mEu"/>
-                                <segue destination="pLX-7p-jZ0" kind="show" id="FWq-Yf-IYh"/>
+                                <segue destination="pLX-7p-jZ0" kind="show" identifier="AddItem" id="FWq-Yf-IYh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -61,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="852" y="142.57871064467767"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Add Item-->
         <scene sceneID="VGq-Vj-6GB">
             <objects>
                 <tableViewController id="Dgs-bn-wfU" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +113,7 @@
                             <outlet property="delegate" destination="Dgs-bn-wfU" id="A1L-Jj-lW0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zPk-KP-HvQ">
+                    <navigationItem key="navigationItem" title="Add Item" id="zPk-KP-HvQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qdq-o4-aHh">
                             <connections>
                                 <action selector="cancel:" destination="Dgs-bn-wfU" id="F1W-2Q-EsN"/>
@@ -158,4 +171,7 @@
             <point key="canvasLocation" x="1605.5999999999999" y="142.57871064467767"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1KV-yt-sCg"/>
+    </inferredMetricsTieBreakers>
 </document>
